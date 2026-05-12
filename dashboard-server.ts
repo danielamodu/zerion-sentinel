@@ -7,7 +7,7 @@ import { fileURLToPath } from 'url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const STATE_PATH = path.resolve(__dirname, 'state.json');
-const DIST_PATH = path.resolve(__dirname, 'dashboard/dist');
+const DIST_PATH = path.resolve(process.cwd(), 'dashboard/dist');
 
 const app = express();
 app.use(cors());
