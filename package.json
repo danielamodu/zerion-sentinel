@@ -1,0 +1,32 @@
+{
+  "name": "zerion-sentinel",
+  "version": "1.0.0",
+  "description": "Autonomous DeFi portfolio sentinel — parses NL policies, watches price/gas feeds, and executes Zerion swaps.",
+  "type": "module",
+  "bin": {
+    "zerion-sentinel": "./src/index.ts"
+  },
+  "scripts": {
+    "start": "tsx src/index.ts",
+    "dev": "tsx --watch src/index.ts",
+    "lint": "tsc --noEmit",
+    "dashboard": "cd dashboard && npm run dev",
+    "server": "tsx dashboard-server.ts"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.24.3",
+    "@google/generative-ai": "^0.24.1",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "axios": "^1.7.2",
+    "commander": "^12.1.0",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "tsx": "^4.15.6",
+    "typescript": "^5.5.2"
+  }
+}

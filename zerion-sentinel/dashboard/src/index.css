@@ -1,0 +1,51 @@
+/* ============================================================
+   SENTINEL — Stark Minimalist
+   Space Grotesk, #000 bg, white text, 1px grid lines
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border-radius: 0 !important;   /* zero rounded corners everywhere */
+  box-shadow: none !important;   /* zero shadows everywhere */
+}
+
+html, body, #root {
+  height: 100%;
+  background: #000;
+}
+
+body {
+  font-family: 'Space Grotesk', system-ui, sans-serif;
+  background: #000;
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@keyframes blink {
+  0%, 49%  { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+@keyframes slide-in {
+  from { transform: translateX(-6px); opacity: 0; }
+  to   { transform: translateX(0);    opacity: 1; }
+}
+
+.blink   { animation: blink 1s step-end infinite; }
+.new-row { animation: slide-in 0.2s ease-out both; }
+
+/* Thin minimal scrollbar */
+::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar-track { background: #000; }
+::-webkit-scrollbar-thumb { background: #1a1a1a; }
