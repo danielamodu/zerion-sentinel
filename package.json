@@ -7,7 +7,7 @@
     "zerion-sentinel": "./src/index.ts"
   },
   "scripts": {
-    "start": "tsx src/index.ts",
+    "start": "tsx dashboard-server.ts",
     "dev": "tsx --watch src/index.ts",
     "lint": "tsc --noEmit",
     "dashboard": "cd dashboard && npm run dev",
